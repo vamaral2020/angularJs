@@ -1,0 +1,36 @@
+<div class="container p-3 my-3 border" ng-init=" vm.init()">
+
+    <div class="container" ng-if="vm.erro">
+        <alert-para-usuario msg="'Erro de Conexão com banco'" tipo="'erro'">
+            <alert-para-usuario />
+    </div>
+
+    <label for="exampleDataList" class="form-label" style="margin-top: 10px;">Pesquisa</label>
+    <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList"
+        placeholder="Pesquisar">
+
+    <table class="table table-hover" ng-if="vm.clientes" style="margin-top: 10px;">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOME</th>
+                <th scope="col">RG</th>
+                <th scope="col">ALTERAR</th>
+                <th scope="col">EXCLUIR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="cliente in vm.clientes | filter : vm.filtroPesquisa">
+                <th scope="row">{{cliente.id}}</th>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.rg}}</td>
+                <td><button type="button" class="btn btn-light" ng-click="vm.editar(cliente.id)"><img
+                            src="node_modules\bootstrap-icons\icons\layers-fill.svg"></button></td>
+
+                <td><button type="button" class="btn btn-light" ng-click="vm.excluir(cliente.id)"><img
+                            src="node_modules\bootstrap-icons\icons\trash-fill.svg"></button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

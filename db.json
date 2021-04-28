@@ -1,0 +1,34 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "João Ribeiro",
+      "rg": "123456"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Ribeiro",
+      "rg": "123456"
+    },
+    {
+      "nome": "Sara Ribeiro Diniz",
+      "rg": "123456789",
+      "id": 6
+    },
+    {
+      "nome": "Wagner Junior Ribeiro Diniz",
+      "rg": "12345678",
+      "id": 7
+    },
+    {
+      "nome": "Iara Diniz Silva",
+      "rg": "625403",
+      "id": 8
+    },
+    {
+      "nome": "Vagner Ribeiro de Amaral",
+      "rg": "166001",
+      "id": 9
+    }
+  ]
+}
